@@ -1,89 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/white">
+    tools:context=".MainActivity">
 
-    <!-- כותרת האפליקציה -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="אפליקציית פולינומים"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:paddingBottom="16dp" />
-
-    <!-- הזנת דרגת הפולינום -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="הכנס את דרגת הפולינום:"
-        android:textSize="18sp"
-        android:paddingBottom="8dp" />
+        android:text="Enter Polynomial Degree (1-99):"/>
 
     <EditText
         android:id="@+id/degreeInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/edittext_border"
-        android:hint="לדוגמה: 3"
+        android:hint="Enter polynomial degree (1-99)"
         android:inputType="number"
-        android:minHeight="48dp"
-        android:padding="8dp" />
+        android:minHeight="48dp" />
 
-    <!-- הזנת המקדמים -->
-    <TextView
+
+
+    <Button
+        android:id="@+id/generateFieldsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="הכנס את המקדמים (מופרדים בפסיק):"
-        android:textSize="18sp"
-        android:paddingTop="16dp"
-        android:paddingBottom="8dp" />
+        android:text="Generate Fields"/>
 
-    <EditText
-        android:id="@+id/coefficientsInput"
+    <LinearLayout
+        android:id="@+id/coefficientsContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/edittext_border"
-        android:hint="לדוגמה: 7,3,6,-4"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:padding="8dp" />
+        android:orientation="vertical"/>
 
-    <!-- כפתור שמירה -->
     <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="שמור פולינום"
-        android:layout_gravity="center_horizontal"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:background="@color/purple_500"
-        android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:text="Save"
+        android:visibility="gone" />
 
-    <!-- הצגת הפולינום -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="פולינום:"
-        android:textSize="18sp"
-        android:paddingTop="16dp"
-        android:paddingBottom="8dp" />
 
     <TextView
         android:id="@+id/polynomialOutput"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="f(x) = "
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:padding="8dp"
-        android:background="@drawable/textview_border" />
-
-
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
